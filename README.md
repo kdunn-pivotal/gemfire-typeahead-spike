@@ -8,7 +8,7 @@ A sample/spike Spring Boot application showing how to implement a common front-e
 
 ## Screenshots:
 
-<img src="screenshots/sample.png?raw=true" width="250px" >
+<img src="screenshots/sample.jpg?raw=true" width="250px" >
 
 <br/>
 
