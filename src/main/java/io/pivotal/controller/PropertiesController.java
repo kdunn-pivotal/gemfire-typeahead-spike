@@ -15,8 +15,8 @@ import io.pivotal.model.Property;
 @RestController
 class PropertyController {
     
-	@Autowired
-	private PropertyRepository propertyRepository;
+    @Autowired
+    private PropertyRepository propertyRepository;
 
     @RequestMapping(value = "/properties", method = GET)
     public Iterable<Property> getProperty(@Param("address") String address) {
