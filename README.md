@@ -6,9 +6,14 @@ A sample/spike Spring Boot application showing how to implement a common front-e
 - Back-end templating is the Freemarker templating library (Java)
 - Front-end templating is the Handlebars templating library (JavaScript) - used along with CSS for beautification of the typeahead dropdown list
 
+## Demo:
+(created with Giphy Capture for mac OS)
+<img src="screenshots/demo.gif?raw=true" width="450px" >
+
+<br/>
+
 ## Screenshots:
 
 <img src="screenshots/sample.jpg?raw=true" width="450px" >
 
-<br/>
 
