@@ -31,14 +31,14 @@
             datumTokenizer: Bloodhound.tokenizers.obj.whitespace(displayField),
             queryTokenizer: Bloodhound.tokenizers.whitespace,
             remote: {
-                url: '/properties?address=%25#QUERY%25',
+                url: '/properties?address=#QUERY#',
                 wildcard: '#QUERY'
             }
         });
     
         $('#remote .typeahead').typeahead(
         {
-            minLength: 0,
+            minLength: 3,
             highlight: true
         }, 
         {
