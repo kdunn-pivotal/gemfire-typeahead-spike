@@ -1,40 +1,16 @@
 package io.pivotal.model;
 
-public class Property { 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.gemfire.mapping.Region;
+
+@Region("Property")
+public class Property {
 	Float Lat;
 	
 	Float Lon;
 	
-	int id;
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Property other = (Property) obj;
-		if (id != other.id)
-			return false;
-		return true;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+	@Id
 	String Address; 
 	
 	Integer PxElevation;    
@@ -51,17 +27,12 @@ public class Property {
 	
 	Integer SlopeGradePercentage;
 	
-	public Property() {
-		// NOOP
+	@PersistenceConstructor
+	public Property(String address, Integer elevation) {
+		Address = address;
+		ElevationFeet = elevation;
 	}
 	
-	public Property(int id, String address, Integer elevationFeet) {
-		super();
-		this.id = id;
-		this.Address = address;
-		this.ElevationFeet = elevationFeet;
-	}
-
 	public Float getLat() {
 		return Lat;
 	}
