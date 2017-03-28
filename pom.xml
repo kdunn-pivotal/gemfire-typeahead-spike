@@ -14,7 +14,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+		<version>1.4.5.RELEASE</version>
+		<!-- >version>1.5.2.RELEASE</version -->
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -25,17 +26,25 @@
 	</properties>
 
 	<dependencies>
-		<!-- >dependency> <groupId>org.springframework.data</groupId> <artifactId>spring-data-gemfire</artifactId> 
-			<version>2.0.0.M1</version> </dependency -->
 		<dependency>
-			<groupId>org.apache.geode</groupId>
+			<groupId>io.pivotal.gemfire</groupId>
 			<artifactId>geode-core</artifactId>
-			<version>1.1.0</version>
+			<version>9.0.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-gemfire</artifactId>
-			<!-- >version>1.5.2.RELEASE</version -->
+			<groupId>io.pivotal.gemfire</groupId>
+			<artifactId>geode-wan</artifactId>
+			<version>9.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.pivotal.gemfire</groupId>
+			<artifactId>geode-cq</artifactId>
+			<version>9.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.pivotal.gemfire</groupId>
+			<artifactId>geode-lucene</artifactId>
+			<version>9.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.shell</groupId>
@@ -62,6 +71,11 @@
 		<repository>
 			<id>alfresco</id>
 			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+		</repository>
+		<repository>
+			<id>gemfire-release-repo</id>
+			<name>Pivotal GemFire Release Repository</name>
+			<url>https://commercial-repo.pivotal.io/data3/gemfire-release-repo/gemfire</url>
 		</repository>
 	</repositories>
 
