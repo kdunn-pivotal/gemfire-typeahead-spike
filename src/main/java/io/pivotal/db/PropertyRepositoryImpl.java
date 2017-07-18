@@ -20,7 +20,7 @@ public class PropertyRepositoryImpl implements PropertyRepository {
     @Override
     public Iterable<Property> luceneFindAFewByAddressFuzzy(String address) throws Exception {
         LuceneQuery<Integer, Property> query = luceneService.createLuceneQueryFactory()
-                .setResultLimit(10)
+                .setLimit(10)
                 .create("myIndex", "/Property", address, "Address");
         Iterable<Property> queryResult = query.findValues();
         return queryResult;

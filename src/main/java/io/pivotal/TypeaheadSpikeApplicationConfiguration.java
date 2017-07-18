@@ -61,7 +61,9 @@ public class TypeaheadSpikeApplicationConfiguration {
     @Bean
     public Region<Integer, Property> propertyRegion(Cache cache, LuceneService luceneService) {
         // Create Index on fields with default analyzer:
-        luceneService.createIndex("myIndex", "/Property", "Address");
+        luceneService.createIndexFactory()
+               .addField("Address")
+               .create("myIndex", "/Property");
         Region region = cache.createRegionFactory(RegionShortcut.PARTITION).create("Property");
         return region;
     }

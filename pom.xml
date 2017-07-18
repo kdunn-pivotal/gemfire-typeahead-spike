@@ -50,22 +50,22 @@
         <dependency>
             <groupId>io.pivotal.gemfire</groupId>
             <artifactId>geode-core</artifactId>
-            <version>9.0.2</version>
+            <version>9.1.0</version>
         </dependency>
         <dependency>
             <groupId>io.pivotal.gemfire</groupId>
             <artifactId>geode-wan</artifactId>
-            <version>9.0.2</version>
+            <version>9.1.0</version>
         </dependency>
         <dependency>
             <groupId>io.pivotal.gemfire</groupId>
             <artifactId>geode-cq</artifactId>
-            <version>9.0.2</version>
+            <version>9.1.0</version>
         </dependency>
         <dependency>
             <groupId>io.pivotal.gemfire</groupId>
             <artifactId>geode-lucene</artifactId>
-            <version>9.0.2</version>
+            <version>9.1.0</version>
         </dependency>
         <!--SDG Dependencies-->
         <!--<dependency>
